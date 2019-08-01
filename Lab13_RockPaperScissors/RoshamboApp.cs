@@ -7,25 +7,16 @@ namespace Lab13_RockPaperScissors
     class RoshamboApp
     {
         
-        public static int NerdBattle(UserPlayer player, NoodleArmNerd nerd)
+        public static int RoshamboBattle(Player player, Player opponent)
         {
             string playerThrow = Enum.GetName(typeof(Roshambo), player.RoValue);
-            string nerdThrow = Enum.GetName(typeof(Roshambo), nerd.RoValue);
-            Console.WriteLine("You threw :{0}", playerThrow);
-            Console.WriteLine("The Punk threw:{0}", nerdThrow);
-            return PlayRPS(playerThrow, nerdThrow);
+            string opponentThrow = Enum.GetName(typeof(Roshambo), opponent.RoValue);
+            Console.WriteLine("You threw: {0}", playerThrow);
+            Console.WriteLine("Your opponent threw: {0}", opponentThrow);
+            return PlayRPS(playerThrow, opponentThrow);
             
         }
-        public static int PunkBattle(UserPlayer player, MohawkPunk punk)
-        { 
-
-            string playerThrow = Enum.GetName(typeof(Roshambo), player.RoValue);
-            string punkThrow = Enum.GetName(typeof(Roshambo), punk.RoValue);
-            Console.WriteLine("You threw :{0}",playerThrow);
-            Console.WriteLine("The Punk threw:{0}",punkThrow);
-            return PlayRPS(playerThrow, punkThrow);
         
-        }
         public static int PlayRPS(string player,string opponent)
         {
             if(player == opponent)

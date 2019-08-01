@@ -17,7 +17,7 @@ namespace Lab13_RockPaperScissors
             Console.WriteLine("Welcome to the Thunder Dome!!");
             //receive user name
             string userName = GetInput("Please enter your name: ");
-            UserPlayer player = new UserPlayer();
+            Player player = new UserPlayer();
             player.Name = userName;
 
             while (again)
@@ -37,16 +37,16 @@ namespace Lab13_RockPaperScissors
                 int battle;
                 if (opponent == "m")
                 {
-                    MohawkPunk punk = new MohawkPunk();
+                    Player punk = new MohawkPunk();
                     punk.RoValue = punk.GenerateRoshambo();
-                    battle = RoshamboApp.PunkBattle(player, punk);
+                    battle = RoshamboApp.RoshamboBattle(player, punk);
                 }
                 else
                 {
-                    NoodleArmNerd nerd = new NoodleArmNerd();
+                    Player nerd = new NoodleArmNerd();
                     
                     nerd.RoValue = nerd.GenerateRoshambo();
-                    battle = RoshamboApp.NerdBattle(player, nerd);
+                    battle = RoshamboApp.RoshamboBattle(player, nerd);
 
                 }
 
