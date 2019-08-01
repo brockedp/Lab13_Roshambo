@@ -11,8 +11,9 @@ namespace Lab13_RockPaperScissors
         {
             string playerThrow = Enum.GetName(typeof(Roshambo), player.RoValue);
             string nerdThrow = Enum.GetName(typeof(Roshambo), nerd.RoValue);
+            Console.WriteLine("You threw :{0}", playerThrow);
+            Console.WriteLine("The Punk threw:{0}", nerdThrow);
             return PlayRPS(playerThrow, nerdThrow);
-            //return PlayRPS(player,nerd);
             
         }
         public static int PunkBattle(UserPlayer player, MohawkPunk punk)
@@ -20,9 +21,10 @@ namespace Lab13_RockPaperScissors
 
             string playerThrow = Enum.GetName(typeof(Roshambo), player.RoValue);
             string punkThrow = Enum.GetName(typeof(Roshambo), punk.RoValue);
+            Console.WriteLine("You threw :{0}",playerThrow);
+            Console.WriteLine("The Punk threw:{0}",punkThrow);
             return PlayRPS(playerThrow, punkThrow);
         
-            //return PlayRPS(player,punk);
         }
         public static int PlayRPS(string player,string opponent)
         {
